@@ -1,0 +1,86 @@
+<fieldset style="padding: 1px">
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body background="{% static "images/download (6).jpg" %}" style="width: 1250px">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+        <img src="{% static "images/IMG_20190206_131643216.jpg" %}" width="50">
+        <a href="{% url "main" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: indigo " >
+          <span class="glyphicon glyphicon-home" style="width: 60px"></span> Home
+        </a>
+        <a href="{% url "about" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: orange">
+          <span class="glyphicon glyphicon-pencil" style="width: 60px;"></span> About Use</a>
+              <a href="{% url "informaction" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: red">
+          <span class="glyphicon glyphicon-italic" style="width: 60px"></span> Informaction
+        </a>
+            <a href="#" class="btn btn-info btn-lg" style="margin:8px;">
+          <span class="glyphicon glyphicon-italic" style="width: 60px;"></span> Time Table
+        </a>
+        <a href="{% url "home" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: green">
+          <span class="glyphicon glyphicon-search" style="width: 60px"></span> search
+        </a>
+      </p>
+    </ul>
+  </div>
+</nav>
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table border="1">
+    <tr>
+        <td>Idno</td>
+        <td>Name</td>
+        <td>Sure Name</td>
+        <td>Father</td>
+        <td>Mother</td>
+        <td>Date Of Birth Day</td>
+        <td>Gender</td>
+        <td>Phone</td>
+        <td>User Name</td>
+        <td>Password</td>
+        <td>Imges</td>
+    </tr>
+
+    {% for i in data %}
+    <tr>
+        <td>{{ i.idno }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.surname }}</td>
+        <td>{{ i.father }}</td>
+        <td>{{ i.mother }}</td>
+        <td>{{ i.date }}</td>
+        <td>{{ i.gen }}</td>
+        <td>{{ i.phone }}</td>
+        <td>{{ i.username }}</td>
+        <td>{{ i.password }}</td>
+        <td><img src="{{ i.image.url }}" width="100"></td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url "show" %}">Profile Date</a>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<fieldset style="padding: 1px">
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body background="{% static "images/download (6).jpg" %}" style="width: 1250px">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+        <img src="{% static "images/IMG_20190206_131643216.jpg" %}" width="50">
+        <a href="{% url "main" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: indigo " >
+          <span class="glyphicon glyphicon-home" style="width: 60px"></span> Home
+        </a>
+        <a href="{% url "about" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: orange">
+          <span class="glyphicon glyphicon-pencil" style="width: 60px;"></span> About Use</a>
+              <a href="{% url "informaction" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: red">
+          <span class="glyphicon glyphicon-italic" style="width: 60px"></span> Informaction
+        </a>
+            <a href="#" class="btn btn-info btn-lg" style="margin:8px;">
+          <span class="glyphicon glyphicon-italic" style="width: 60px;"></span> Time Table
+        </a>
+        <a href="{% url "home" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: green">
+          <span class="glyphicon glyphicon-search" style="width: 60px"></span> search
+        </a>
+        <a href="{% url "home1" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: green">
+          <span class="glyphicon glyphicon-search" style="width: 60px"></span> Result
+        </a>
+      </p>
+    </ul>
+  </div>
+</nav>
+</body>
+<form action="/search1/">
+    {% csrf_token %}
+<table border="4" align="center">
+    <tr><td>
+    <select name="name">
+
+        <option name="idno"> Student Id Number</option>
+    </select>
+        <tr>
+    <td>
+
+<input type="number" name="idno" placeholder="Enter id Number">
+
+          </td>
+</tr>
+    <tr><td><button type="submit">search</button></td></tr>
+</table>
+<br>
+<br>
+<br>
+    {% for i in qr%}
+    <fieldset style="padding: 3px;width:60%;" align="center"  >
+       <font face=""><h1 align="center">Dr.K.K.R Gowtham school</h1></font>
+        <div class="sidebar" >
+            <p style="float: left ;">
+        <table width="400">
+            <tr><td><h4>Father  Name :</h4></td><td><h4>{{ i.father }}</h4></td>  <p style="float: right ;"><td><img src="{{ i.image.url }}" width="100"></td></div>
+            </div></tr>
+            <tr><td><h4>Mother  Name:  </h4></td><td><h4>{{ i.mother }}</h4></td></tr>
+            <tr><td><h4>Student Id No:</h4></td><td><h4>{{ i.idno }}</h4></td></tr>
+            <tr><td><h4>Student Name:</h4></td><td><h4>{{ i.name }}</h4></td></tr>
+            <tr><td><h4>Student Gender :</h4></td><td><h4>{{ i.gen }}</h4></td></tr>
+            <tr><td><h4>S belonging  to:</h4></td></tr>
+            <tr><td><h4 align="center">With English as medium of instruction.</h4></td></tr>
+
+
+        </table>
+
+        <table border="1">
+            <tr><td><h1>Data Of Birth</h1></td><td><h1>{{ i.date }}</h1></td></tr>
+        </table>
+        </p>
+
+    </fieldset>
+{% endfor %}
+
+<fieldset style="padding: 3px;width:60%;" align="center"  >
+{% for i in recs %}
+            {% for x in recd %}
+<div class="sidebar" >
+                 <p style="float: left ;">
+<table >
+
+            <tr>
+                <td><h4>Quection 1:</h4></td>
+            <td>{% if i.que1 == x.answer1 %}
+                    <font color="blue"><h4>Pass</h4></font>
+                {% else %}
+                <font color="red"><h4>Faill</h4></font>
+                {% endif %}
+                </td>
+            </tr>
+                <tr><td><h4>Quection 2:</h4></td>
+            <td>{% if i.que2 == x.answer2 %}
+                <font color="blue"><h4>Pass</h4></font>
+                {% else %}
+                <font color="red"><h4>Faill</h4></font>
+                {% endif %}
+            </td>
+        </tr>
+        <tr>
+            <td><h4>Quection 3:</h4></td>
+            <td>{% if i.que3 == x.answer3 %}
+                <font color="blue"><h4>Pass</h4></font>
+                {% else %}
+                <font color="red"><h4>Faill</h4></font>
+                {% endif %}
+            </td>
+
+        </tr>
+                <tr><td><h4>Quection 4:</h4></td>
+        <td>{% if i.que4 == x.answer4 %}
+            <font color="blue"><h4>Pass</h4></font>
+                {% else %}
+            <font color="red"><h4>Faill</h4></font>
+                {% endif %}
+            </td>
+    </tr>
+                <tr><td><h4>Quection 5:</h4></td>
+        <td>{% if i.que5 == x.answer5 %}
+            <font color="blue"><h4>Pass</h4></font>
+                {% else %}
+            <font color="red"><h4>Faill</h4></font>
+                {% endif %}
+            </td>
+    </tr>
+                <tr><td><h4>Quection 6:</h4></td>
+        <td>{% if i.que6 == x.answer6 %}
+                <font color="blue"><h4>Pass</h4></font>
+                {% else %}
+                <font color="red"><h4>Faill</h4></font>
+                {% endif %}
+            </td>
+    </tr>
+                <tr><td><h4>Quection 7:</h4></td>
+        <td>{% if i.que7 == x.answer7 %}
+                <font color="blue"><h4>Pass</h4></font>
+                {% else %}
+                <font color="red"><h4>Faill</h4></font>
+                {% endif %}
+            </td>
+    </tr>
+                <tr><td><h4>Quection 8:</h4></td>
+        <td>{% if i.que8 == x.answer8 %}
+                <font color="blue"><h4>Pass</h4></font>
+                {% else %}
+                <font color="red"><h4>Faill</h4></font>
+                {% endif %}
+            </td>
+    </tr>
+                <tr><td><h4>Quection 9:</h4></td>
+        <td>{% if i.que9 == x.answer9 %}
+                <font color="blue"><h4>Pass</h4></font>
+                {% else %}
+                <font color="red"><h4>Faill</h4></font>
+                {% endif %}
+            </td>
+    </tr>
+                <td><h4>Quection 10:</h4></td>
+            <td>{% if i.que10 == x.answer10 %}
+                <font color="blue"><h4>Pass</h4></font>
+                {% else %}
+                <font color="red"><h4>Faill</h4></font>
+                {% endif %}
+            </td>
+            </tr>
+        {% endfor %}
+{% endfor %}
+    </table>
+    </p>
+    </div>
+</fieldset>
+<fieldset style="padding: 3px;width:60%;" align="center"  >
+<table border="1">
+    <tr><td>Quection:1</td>
+    <td>Quection:2</td>
+    <td>Quection:3</td>
+    <td>Quection:4</td>
+    <td>Quection:5</td>
+    <td>Quection:6</td>
+    <td>Quection:7</td>
+    <td>Quection:8</td>
+    <td>Quection:9</td>
+    <td>Quection:10</td></tr>
+
+{% for i in recs %}
+            {% for x in recd %}
+<div class="sidebar" >
+                 <p style="float: left ;">
+
+
+
+            <tr>
+
+            <td>{% if i.que1 == x.answer1 %}
+                    <font color="blue"><h4>1</h4></font>
+                {% else %}
+                <font color="red"><h4>0</h4></font>
+                {% endif %}
+                </td>
+
+            <td>{% if i.que2 == x.answer2 %}
+                <font color="blue"><h4>1</h4></font>
+                {% else %}
+                <font color="red"><h4>0</h4></font>
+                {% endif %}
+            </td>
+
+
+            <td>{% if i.que3 == x.answer3 %}
+                <font color="blue"><h4>1</h4></font>
+                {% else %}
+                <font color="red"><h4>0</h4></font>
+                {% endif %}
+            </td>
+
+        <td>{% if i.que4 == x.answer4 %}
+            <font color="blue"><h4>1</h4></font>
+                {% else %}
+            <font color="red"><h4>0</h4></font>
+                {% endif %}
+            </td>
+
+        <td>{% if i.que5 == x.answer5 %}
+            <font color="blue"><h4>1</h4></font>
+                {% else %}
+            <font color="red"><h4>0</h4></font>
+                {% endif %}
+            </td>
+
+        <td>{% if i.que6 == x.answer6 %}
+                <font color="blue"><h4>1</h4></font>
+                {% else %}
+                <font color="red"><h4>0</h4></font>
+                {% endif %}
+            </td>
+
+        <td>{% if i.que7 == x.answer7 %}
+                <font color="blue"><h4>1</h4></font>
+                {% else %}
+                <font color="red"><h4>0</h4></font>
+                {% endif %}
+            </td>
+
+        <td>{% if i.que8 == x.answer8 %}
+                <font color="blue"><h4>1</h4></font>
+                {% else %}
+                <font color="red"><h4>0</h4></font>
+                {% endif %}
+            </td>
+
+        <td>{% if i.que9 == x.answer9 %}
+                <font color="blue"><h4>1</h4></font>
+                {% else %}
+                <font color="red"><h4>0</h4></font>
+                {% endif %}
+            </td>
+
+            <td>{% if i.que10 == x.answer10 %}
+                <font color="blue"><h4>1</h4></font>
+                {% else %}
+                <font color="red"><h4>0</h4></font>
+                {% endif %}
+            </td>
+            </tr>
+        {% endfor %}
+{% endfor %}
+    </table>
+    </div>
+</table>
+</fieldset>
+</form>
+</body>
+</html>

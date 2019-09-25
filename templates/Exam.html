@@ -1,0 +1,532 @@
+{% load staticfiles %}
+<fieldset style="padding: 1px">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body bgcolor="black" style="width: 1250px;background-color: black">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+        <img src="{% static "images/IMG_20190206_131643216.jpg" %}" width="50">
+        <a href="{% url "main" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: indigo " >
+          <span class="glyphicon glyphicon-home" style="width: 60px"></span> Home
+        </a>
+        <a href="{% url "about" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: orange">
+          <span class="glyphicon glyphicon-pencil" style="width: 60px;"></span> About Use</a>
+              <a href="{% url "informaction" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: red">
+          <span class="glyphicon glyphicon-italic" style="width: 60px"></span> Informaction
+        </a>
+            <a href="#" class="btn btn-info btn-lg" style="margin:8px;">
+          <span class="glyphicon glyphicon-italic" style="width: 60px;"></span> Time Table
+        </a>
+        <a href="{% url "home" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: green">
+          <span class="glyphicon glyphicon-search" style="width: 60px"></span> search
+        </a>
+      </p>
+
+    </ul>
+  </div>
+</nav>
+</body>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body bgcolor="red">
+
+<form action="{% url "rmd" %}" method="post">
+    {% csrf_token %}
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="idno" > <h4 style="color: red">Exam ID Number :</h4></label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="idno" placeholder="Exam Id Number " name="idno" >
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+     <div class="form-group">
+         <label class="control-label col-sm-2" for="que1"><h4 style="color: red">Exam  Quection 1:</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="que1" placeholder="Enter Exam  Quection 1 " name="que1">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans1"><h4 style="color: yellow">A. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans1" placeholder="Enter Answer 1 " name="ans1" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans2"><h4 style="color: blue">B. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans2" placeholder="Enter Answer 1 " name="ans2" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans3"><h4 style="color: firebrick">C. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans3" placeholder="Enter Answer 1 " name="ans3" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans4"><h4 style="color: turquoise">D. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans4" placeholder="Enter Answer 1 " name="ans4" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="que2"><h4 style="color: red">Exam  Quection  2:</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="que2" placeholder="Enter Exam  Quection 2" name="que2">
+      </div>
+    <br>
+    <br>
+    <br>
+    <br>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="ans5"><h4 style="color: yellow">A. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans5" placeholder="Enter Answer 1 " name="ans5" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans6"><h4 style="color: blue">B. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans6" placeholder="Enter Answer 1 " name="ans6" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans7"><h4 style="color: firebrick">C. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans7" placeholder="Enter Answer 1 " name="ans7" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans8"><h4 style="color: turquoise">D. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans8" placeholder="Enter Answer 1 " name="ans8" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="que3" ><h4 style="color: red">Exam  Quection  3:</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="que3" placeholder="Enter Exam  Quection 3" name="que3" >
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="ans9"><h4 style="color: yellow">A. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans9" placeholder="Enter Answer 1 " name="ans9" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans10"><h4 style="color: blue">B. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans10" placeholder="Enter Answer 1 " name="ans10" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans11"><h4 style="color: firebrick">C. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans11" placeholder="Enter Answer 1 " name="ans11" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans12"><h4 style="color: turquoise">D. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans12" placeholder="Enter Answer 1 " name="ans12" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+     <div class="form-group">
+         <label class="control-label col-sm-2" for="que4"><h4 style="color: red">Exam  Quection  4:</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="que4" placeholder="Enter Exam  Quection 4" name="que4">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="ans13"><h4 style="color: yellow">A. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans13" placeholder="Enter Answer 1 " name="ans13" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans14"><h4 style="color: blue">B. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans14" placeholder="Enter Answer 1 " name="ans14" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans15"><h4 style="color: firebrick">C. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans15" placeholder="Enter Answer 1 " name="ans15" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans16"><h4 style="color: turquoise">D. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans16" placeholder="Enter Answer 1 " name="ans16" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="que5"><h4 style="color: red">Exam  Quection 5:</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="que5" placeholder="Enter Exam  Quection 5" name="que5">
+      </div>
+    <br>
+    <br>
+    <br>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="ans17"><h4 style="color: yellow">A. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans17" placeholder="Enter Answer 1 " name="ans17" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans18"><h4 style="color: blue">B. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans18" placeholder="Enter Answer 1 " name="ans18" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans19"><h4 style="color: firebrick">C. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans19" placeholder="Enter Answer 1 " name="ans19" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans20"><h4 style="color: turquoise">D. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans20" placeholder="Enter Answer 1 " name="ans20" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="que6" ><h4 style="color: red">Exam  Quection  6:</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="que6" placeholder="Enter Exam  Quection 6" name="que6" >
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="ans21"><h4 style="color: yellow">A. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans21" placeholder="Enter Answer 1 " name="ans21" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans22"><h4 style="color: blue">B. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans22" placeholder="Enter Answer 1 " name="ans22" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans23"><h4 style="color: firebrick">C. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans23" placeholder="Enter Answer 1 " name="ans23" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans24"><h4 style="color: turquoise">D. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans24" placeholder="Enter Answer 1 " name="ans24" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+     <div class="form-group">
+         <label class="control-label col-sm-2" for="que7"><h4 style="color: red">Exam  Quection  7:</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="que7" placeholder="Enter Exam  Quection 7" name="que7">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="ans25"><h4 style="color: yellow">A. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans25" placeholder="Enter Answer 1 " name="ans25" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans26"><h4 style="color: blue">B. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans26" placeholder="Enter Answer 1 " name="ans26" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans27"><h4 style="color: firebrick">C. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans27" placeholder="Enter Answer 1 " name="ans27" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans28"><h4 style="color: turquoise">D. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans28" placeholder="Enter Answer 1 " name="ans28" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="que8"><h4 style="color: red">Exam  Quection  8:</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="que8" placeholder="Enter Exam  Quection 8" name="que8">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="ans29"><h4 style="color: yellow">A. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans29" placeholder="Enter Answer 1 " name="ans29" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans30"><h4 style="color: blue">B. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans30" placeholder="Enter Answer 1 " name="ans30" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans31"><h4 style="color: firebrick">C. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans31" placeholder="Enter Answer 1 " name="ans31" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans32"><h4 style="color: turquoise">D. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans32" placeholder="Enter Answer 1 " name="ans32" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="que9"><h4 style="color: red">Exam  Quection  9:</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="que9" placeholder="Enter Exam  Quection 9" name="que9">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="ans33"><h4 style="color: yellow">A. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans33" placeholder="Enter Answer 1 " name="ans33" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans34"><h4 style="color: blue">B. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans34" placeholder="Enter Answer 1 " name="ans34" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans35"><h4 style="color: firebrick">C. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans35" placeholder="Enter Answer 1 " name="ans35" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans36"><h4 style="color: turquoise">D. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans36" placeholder="Enter Answer 1 " name="ans36" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="que10"><h4 style="color: red">Exam  Quection  10:</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="que10" placeholder="Enter Exam  Quection 10" name="que10">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="ans37"><h4 style="color: yellow">A. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans37" placeholder="Enter Answer 1 " name="ans37" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans38"><h4 style="color: blue">B. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans38" placeholder="Enter Answer 1 " name="ans38" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans39"><h4 style="color: firebrick">C. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans39" placeholder="Enter Answer 1 " name="ans39" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="ans40"><h4 style="color: turquoise">D. Answer</h4></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="ans40" placeholder="Enter Answer 1 " name="ans40" style="border-color: #e60073;color: red;width: 300px">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+      <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" style="background-color: salmon">Submit</button>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</form>
+</body>
+</html>
+
+
+
+
+

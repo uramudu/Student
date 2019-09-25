@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.dropbtn {
+  background-color: black;
+  color: white;
+  padding: 30px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: red}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #191970;
+}
+</style>
+</head>
+<body bgcolor="black">
+
+
+<div class="dropdown">
+  <button class="dropbtn" style="margin: 36px">Student DroupDown</button>
+  <div class="dropdown-content">
+      <a href="{% url "Det" %}"><h1 style="color: midnightblue">Student Quection Posted</h1></a>
+      <a href="{% url "all" %}"><h1 style="color: midnightblue">Post Quection Answer</h1></a>
+      <a href="{% url "exam3" %}"><h1 style="color: midnightblue">Student Exam</h1></a>
+      <a href="{% url "exam6" %}"><h1 style="color: midnightblue">Exam Answer Result</h1></a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn" style="margin: 36px" >Telugu  All News Paper</button>
+  <div class="dropdown-content">
+      <a href="https://www.eenadu.net/"><h1 style="color:  midnightblue">Eenadu Paper</h1></a>
+      <a href="https://www.andhrajyothy.com/"><h1 style="color:  midnightblue">Andhrajyothi Paper</h1></a>
+      <a href="https://epaper.vaartha.com/"><h1 style="color:  midnightblue">Vaartha Paper</h1></a>
+      <a href="https://epaper.sakshi.com/"><h1 style="color:  midnightblue">Sakshi Paper</h1></a>
+      <a href="http://epaper.suryaa.com/"><h1 style="color:  midnightblue">Surya Paper</h1></a>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn" style="margin: 36px" >All Language Books</button>
+  <div class="dropdown-content">
+      <a href="https://www.telugubooks.in/collections/must-read-100-telugu-books"><h1 style="color:  midnightblue">Telugu Books</h1></a>
+      <a href="https://www.bharatdarshan.co.nz/literature-collection/2/51/hindi-story.html"><h1 style="color:  midnightblue">Hindi Books</h1></a>
+      <a href="https://www.storiestogrowby.org/short-english-stories-kids-free/"><h1 style="color:  midnightblue">English Books</h1></a>
+      <a href="https://www.teachoo.com/maths/"><h1 style="color:  midnightblue">Mathamatics Books</h1></a>
+      <a href="https://www.vedantu.com/formula/physics-formulas"><h1 style="color:  midnightblue">Physics Books</h1></a>
+      <a href="{% url "science" %}"><h1 style="color:  midnightblue">All Science Projects</h1></a>
+      <a href="https://www.myindiamyglory.com/history/"><h1 style="color:  midnightblue">Soical Books</h1></a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn" style="margin: 36px">all freedom fighters of India</button>
+  <div class="dropdown-content">
+      <a href="{% url "Free" %}"><h1 style="color: midnightblue">Mahathma gandi</h1></a>
+      <a href="{% url "Free1" %}"><h1 style="color: midnightblue">Sardar Vallabhbhai Patel</h1></a>
+      <a href="{% url "Free2" %}"><h1 style="color: midnightblue">Life of Netaji Subhash Chandra Bose</h1></a>
+      <a href="{% url "Free3" %}"><h1 style="color: midnightblue">Alluri seetharama raju </h1></a>
+  </div>
+</div>
+
+
+
+</body>
+</html>

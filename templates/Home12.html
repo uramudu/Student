@@ -1,0 +1,29 @@
+<form>
+    <table border="1" bgcolor="#f5f5dc">
+        <tr>
+            <th width="100">IDNO</th>
+            <th width="100">Answer</th>
+            <th width="100">Update</th>
+
+        </tr>
+        {% for x in object_list %}
+            <tr>
+            <td>
+                <form action="/del{{ x.idno }}/">
+                    <button type="submit">{{ x.idno }}</button></form></td>
+
+            <td>
+            <form  action="/up1{{ x.idno }}/" >
+
+                <button type="submit">yes</button>
+                </form>
+            </td>
+            </tr>
+
+        {% endfor %}
+    </table>
+ <table>
+     <tr><td><input type="button" value="Go Back!" onclick="history.back()" ></td></tr>
+ </table>
+
+</form>

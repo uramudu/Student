@@ -1,0 +1,86 @@
+{% load staticfiles %}
+<fieldset style="padding: 1px">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body background="{% static "images/download (6).jpg" %}" style="width: 1250px">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+        <img src="{% static "images/IMG_20190206_131643216.jpg" %}" width="50">
+        <a href="{% url "main" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: indigo " >
+          <span class="glyphicon glyphicon-home" style="width: 60px"></span> Home
+        </a>
+        <a href="{% url "about" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: orange">
+          <span class="glyphicon glyphicon-pencil" style="width: 60px;"></span> About Use</a>
+              <a href="{% url "informaction" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: red">
+          <span class="glyphicon glyphicon-italic" style="width: 60px"></span> Informaction
+        </a>
+            <a href="#" class="btn btn-info btn-lg" style="margin:8px;">
+          <span class="glyphicon glyphicon-italic" style="width: 60px;"></span> Time Table
+        </a>
+        <a href="{% url "home" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: green">
+          <span class="glyphicon glyphicon-search" style="width: 60px"></span> search
+        </a>
+      </p>
+
+    </ul>
+  </div>
+</nav>
+</body>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body bgcolor="red">
+<form action="{% url "login" %}" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <div class="form-group">
+      <label class="control-label col-sm-2" for="username">Student User Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="username" placeholder="Enter Student Name" name="username" style="color: red;border-color: greenyellow">
+      </div>
+    </div>
+        <br>
+        <br>
+        <br>
+<div class="form-group">
+      <label class="control-label col-sm-2" for="password">Student Password:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="password" placeholder="Enter Student Password" name="password" style="background-color: red;color: black;border-color: green;">
+      </div>
+    </div>
+        <br>
+        <br>
+        <br>
+        <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default" style="background-color: black;color: white">Submit</button>
+      </div>
+    </div>
+    </div>
+</form>
+</body>
+</html>
+
+
+

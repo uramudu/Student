@@ -1,0 +1,12 @@
+<form method="post">
+    {% csrf_token %}
+    <table align="center" border="2">
+        <tr><th colspan="2">Teacher Answer</th></tr>
+        {{ form }}
+        <tr><th colspan="2"><button type="submit">Send</button></th></tr>
+
+    </table>
+     <table align="center">
+     <tr><td><input type="button" value="Go Back!" onclick="history.back()" ></td></tr>
+ </table>
+</form>

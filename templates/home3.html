@@ -1,0 +1,20 @@
+<html>
+<body>
+<form action="/search1/" >
+    {% csrf_token %}
+    <select name="name">
+
+        <option name="idno">Idno</option>
+    </select>
+    <table>
+        <tr><td>
+    <input type="text" name="idno" placeholder="Enter Student idno" required>
+            </td></tr>
+        <tr><td>
+        <button type="submit">Search</button>
+        </td></tr>
+        </table>
+</form>
+<input type="button" value="Go Back !" onclick="history.back()">
+</body>
+</html>

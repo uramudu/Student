@@ -1,0 +1,121 @@
+<html>
+<body>
+<form>
+    <table border="1">
+        <tr>
+            <td>Student Id Number</td>
+            <td>Quection 1:</td>
+            <td>Quection 2:</td>
+            <td>Quection 3:</td>
+            <td>Quection 4:</td>
+            <td>Quection 5:</td>
+            <td>Quection 6:</td>
+            <td>Quection 7:</td>
+            <td>Quection 8:</td>
+            <td>Quection 9:</td>
+            <td>Quection 10:</td>
+        </tr>
+        {% for i in data %}
+            {% for x in data1 %}
+        <tr>
+
+        <td>{{ i.idno }}</td>
+
+        <td>
+            {% if i.que1 == x.answer1%}
+                <font color="blue">True</font>
+            {% elif i.que1 == 'None' %}
+                <font color="red">Wrong</font>
+            {% else %}
+                <font color="red">Wrong</font>
+            {% endif %}
+        </td>
+        <td>
+            {% if i.que2 == x.answer2%}
+                <font color="blue">True</font>
+            {% elif i.que2 == 'None' %}
+                <font color="red">Wrong</font>
+            {% else %}
+                <font color="red">Wrong</font>
+            {% endif %}
+        </td>
+        <td>
+            {% if i.que3 == x.answer3%}
+                <font color="blue">True</font>
+            {% elif i.que2 == 'None' %}
+                <font color="red">Wrong</font>
+            {% else %}
+                <font color="red">Wrong</font>
+            {% endif %}
+        </td>
+        <td>
+            {% if i.que4 == x.answer4%}
+                <font color="blue">True</font>
+            {% elif i.que2 == 'None' %}
+                <font color="red">Wrong</font>
+            {% else %}
+                <font color="red">Wrong</font>
+            {% endif %}
+        </td>
+        <td>
+            {% if i.que5 == x.answer5%}
+                <font color="blue">True</font>
+            {% elif i.que2 == 'None' %}
+                <font color="red">Wrong</font>
+            {% else %}
+                <font color="red">Wrong</font>
+            {% endif %}
+        </td>
+        <td>
+            {% if i.que6 == x.answer6%}
+                <font color="blue">True</font>
+            {% elif i.que2 == 'None' %}
+                <font color="red">Wrong</font>
+            {% else %}
+                <font color="red">Wrong</font>
+            {% endif %}
+        </td>
+        <td>
+            {% if i.que7 == x.answer7%}
+                <font color="blue">True</font>
+            {% elif i.que2 == 'None' %}
+                <font color="red">Wrong</font>
+            {% else %}
+                <font color="red">Wrong</font>
+            {% endif %}
+        </td>
+        <td>
+            {% if i.que8 == x.answer8%}
+                <font color="blue">True</font>
+            {% elif i.que2 == 'None' %}
+                <font color="red">Wrong</font>
+            {% else %}
+                <font color="red">Wrong</font>
+            {% endif %}
+        </td>
+        <td>
+            {% if i.que9 == x.answer9%}
+                <font color="blue">True</font>
+            {% elif i.que2 == 'None' %}
+                <font color="red">Wrong</font>
+            {% else %}
+                <font color="red">Wrong</font>
+            {% endif %}
+        </td>
+        <td>
+            {% if i.que10 == x.answer10%}
+                <font color="blue">True</font>
+            {% elif i.que2 == 'None' %}
+                <font color="red">Wrong</font>
+            {% else %}
+                <font color="red">Wrong</font>
+            {% endif %}
+        </td>
+        </tr>
+
+    {% endfor %}
+{% endfor %}
+     </table>
+</form>
+</body>
+</html>

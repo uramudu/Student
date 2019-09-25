@@ -1,0 +1,66 @@
+<fieldset style="padding: 1px">
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body background="{% static "images/download (6).jpg" %}" style="width: 1250px">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+        <img src="{% static "images/IMG_20190206_131643216.jpg" %}" width="50">
+        <a href="{% url "main" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: indigo " >
+          <span class="glyphicon glyphicon-home" style="width: 60px"></span> Home
+        </a>
+        <a href="{% url "about" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: orange">
+          <span class="glyphicon glyphicon-pencil" style="width: 60px;"></span> About Use</a>
+              <a href="{% url "informaction" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: red">
+          <span class="glyphicon glyphicon-italic" style="width: 60px"></span> Informaction
+        </a>
+            <a href="#" class="btn btn-info btn-lg" style="margin:8px;">
+          <span class="glyphicon glyphicon-italic" style="width: 60px;"></span> Time Table
+        </a>
+        <a href="{% url "home" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: green">
+          <span class="glyphicon glyphicon-search" style="width: 60px"></span> search
+        </a>
+
+      </p>
+    </ul>
+  </div>
+</nav>
+</body>
+<body bgcolor="#ba55d3">
+<form>
+    <table border="1" bgcolor="black">
+        <tr>
+            <td><h1 style="color: white">Idno</h1></td>
+            <td><h1 style="color: white">Answer</h1></td>
+        </tr>
+        {% for i in object_list %}
+            <tr><td><h1 style="color: white">{{ i.num }}</h1></td>
+            <td><h1 style="color: white">{{ i.Answer }}</h1></td></tr>
+        {% endfor %}
+    </table>
+<br>
+<br>
+<br>
+<tr>
+    <td><input type="button" value="Go Back!" onclick="history.back()"></td>
+</tr>
+</form>
+</body>
+</html>

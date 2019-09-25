@@ -1,0 +1,149 @@
+<fieldset style="padding: 1px">
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body background="{% static "images/download (6).jpg" %}" style="width: 1250px">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+        <img src="{% static "images/IMG_20190206_131643216.jpg" %}" width="50">
+        <a href="{% url "main" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: indigo " >
+          <span class="glyphicon glyphicon-home" style="width: 60px"></span> Home
+        </a>
+        <a href="{% url "about" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: orange">
+          <span class="glyphicon glyphicon-pencil" style="width: 60px;"></span> About Use</a>
+              <a href="{% url "informaction" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: red">
+          <span class="glyphicon glyphicon-italic" style="width: 60px"></span> Informaction
+        </a>
+            <a href="#" class="btn btn-info btn-lg" style="margin:8px;">
+          <span class="glyphicon glyphicon-italic" style="width: 60px;"></span> Time Table
+        </a>
+        <a href="{% url "home" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: green">
+          <span class="glyphicon glyphicon-search" style="width: 60px"></span> search
+        </a>
+
+      </p>
+    </ul>
+  </div>
+</nav>
+</body>
+<form action="/exam4/" method="post">
+    {% csrf_token %}
+    {% for i in data %}
+    <table>
+    <tr>
+        <td><h4 style="color: red">Student Id Number  :</h4></td><td><input type="number" name="idno" placeholder="Enter Student Id Number" required></td>
+    </tr>
+        <tr>
+            <td><h4 style="color: red">Question Paper  Idno :</h4></td><td><h4 style="color: blue">{{ i.idno }}</h4> </td>
+        </tr>
+        <tr>
+            <td><h4 style="color: red">Quection 1 :</h4></td><td><h4 style="color: blue">1.{{ i.que1 }}</h4> </td></td>
+        </tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que1" value="{{ i.ans1 }}">{{ i.ans1 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que1" value="{{ i.ans2 }}">{{ i.ans2 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que1" value="{{ i.ans3 }}">{{ i.ans3 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que1" value="{{ i.ans4 }}">{{ i.ans4 }}</h4></td></tr>
+
+        <tr>
+            <td><h4 style="color: red">Quection 2 :</h4></td><td><h4 style="color: blue">2.{{ i.que2 }}</h4></td>
+        <tr>
+        </tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que2" value="{{ i.ans5 }}">{{ i.ans5}}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que2" value="{{ i.ans6 }}">{{ i.ans6 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que2" value="{{ i.ans7 }}">{{ i.ans7 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que2" value="{{ i.ans8 }}">{{ i.ans8 }}</h4></td></tr>
+        </tr>
+
+        <tr>
+            <td><h4 style="color: red">Quection 3 :</h4></td><td><h4 style="color: blue">3.{{ i.que3 }}</h4></td>
+         </tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que3" value="{{ i.ans9 }}">{{  i.ans9 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que3" value="{{ i.ans10 }}">{{ i.ans10 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que3" value="{{ i.ans11 }}">{{ i.ans11 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que3" value="{{ i.ans12 }}">{{ i.ans12 }}</h4></td></tr>
+        </tr>
+        <tr>
+            <td><h4 style="color: red">Quection 4 :</h4></td><td><h4 style="color: blue">4.{{ i.que4 }}</h4></td>
+         </tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que4" value="{{ i.ans13 }}">{{ i.ans13 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que4" value="{{ i.ans14 }}">{{ i.ans14 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que4" value="{{ i.ans15 }}">{{ i.ans15 }}</h4></td></tr>
+        <tr><td><td><h4 style="color:indigo;"><input type="radio" name="que4" value="{{ i.ans16 }}">{{ i.ans16 }}</h4></td></tr>
+        </tr>
+        <tr>
+            <td><h4 style="color: red">Quection 5 :</h4></td><td><h4 style="color: blue">5.{{ i.que5 }}</h4></td>
+         </tr>
+        <tr>
+            <td><td><h4 style="color:indigo;"><input type="radio" name="que5" value="{{ i.ans17 }}">{{ i.ans17 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que5" value="{{ i.ans18 }}">{{ i.ans18 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que5" value="{{ i.ans19 }}">{{ i.ans19 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que5" value="{{ i.ans20 }}">{{ i.ans20 }}</h4></td></tr>
+        </tr>
+        <tr>
+            <td><h4 style="color: red">Quection 6 :</h4></td><td><h4 style="color: blue">6.{{ i.que6 }}</h4></td>
+         </tr>
+        <tr>
+            <td><td><h4 style="color:indigo;"><input type="radio" name="que6" value="{{ i.ans21 }}">{{ i.ans21 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que6" value="{{ i.ans22 }}">{{ i.ans22 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que6" value="{{ i.ans23 }}">{{ i.ans23 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que6" value="{{ i.ans24 }}">{{ i.ans24 }}</h4></td></tr>
+        </tr>
+        <tr>
+            <td><h4 style="color: red">Quection 7 :</h4></td><td><h4 style="color: blue">7.{{ i.que7 }}</h4></td>
+         </tr>
+        <tr>
+            <td><td><h4 style="color:indigo;"><input type="radio" name="que7" value="{{ i.ans25 }}">{{ i.ans25 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que7" value="{{ i.ans26 }}">{{ i.ans26 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que7" value="{{ i.ans27 }}">{{ i.ans27 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que7" value="{{ i.ans28 }}">{{ i.ans28 }}</h4></td></tr>
+        </tr>
+        <tr>
+            <td><h4 style="color: red">Quection 8 :</h4></td><td><h4 style="color: blue">8.{{ i.que8 }}</h4></td>
+         </tr>
+        <tr>
+            <td><td><h4 style="color:indigo;"><input type="radio" name="que8" value="{{ i.ans29 }}">{{ i.ans29 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que8" value="{{ i.ans30 }}">{{ i.ans30 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que8" value="{{ i.ans31 }}">{{ i.ans31 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que8" value="{{ i.ans32 }}">{{ i.ans32 }}</h4></td></tr>
+        </tr>
+        <tr>
+            <td><h4 style="color: red">Quection 9 :</h4></td><td><h4 style="color: blue">9.{{ i.que9 }}</h4></td>
+        </tr>
+        <tr>
+            <td><td><h4 style="color:indigo;"><input type="radio" name="que9" value="{{ i.ans33 }}">{{ i.ans33 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que9" value="{{ i.ans34 }}">{{ i.ans34 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que9" value="{{ i.ans35 }}">{{ i.ans35 }}</h4></td>></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que9" value="{{ i.ans36 }}">{{ i.ans36 }}</h4></td></tr>
+        </tr>
+        <tr>
+            <td><h4 style="color: red">Quection 10 :</h4></td><td><h4 style="color: blue">10.{{ i.que10 }}</h4></td>
+         </tr>
+        <tr>
+            <td><td><h4 style="color:indigo;"><input type="radio" name="que10" value="{{ i.ans37 }}">{{ i.ans37 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que10" value="{{ i.ans38 }}">{{ i.ans38 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que10" value="{{ i.ans39 }}">{{ i.ans39 }}</h4></td></tr>
+        <tr>    <td><td><h4 style="color:indigo;"><input type="radio" name="que10" value="{{ i.ans40 }}">{{ i.ans40 }}</h4></td></tr>
+        </tr>
+    </table>
+    {% endfor %}
+    <tr><td><button type="submit">Submit</button></td></tr>
+</form>
+</body>
+</html>

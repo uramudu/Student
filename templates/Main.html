@@ -1,0 +1,103 @@
+<fieldset style="padding: 1px">
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<body background="{% static "images/download (6).jpg" %}" style="width: 1250px">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+        <img src="{% static "images/IMG_20190206_131643216.jpg" %}" width="50">
+        <a href="{% url "main" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: indigo " >
+          <span class="glyphicon glyphicon-home" style="width: 60px"></span> Home
+        </a>
+        <a href="{% url "about" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: orange">
+          <span class="glyphicon glyphicon-pencil" style="width: 60px;"></span> About Use</a>
+              <a href="{% url "informaction" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: red">
+          <span class="glyphicon glyphicon-italic" style="width: 60px"></span> Informaction
+        </a>
+            <a href="#" class="btn btn-info btn-lg" style="margin:8px;">
+          <span class="glyphicon glyphicon-italic" style="width: 60px;"></span> Time Table
+        </a>
+        <a href="{% url "home" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: green">
+          <span class="glyphicon glyphicon-search" style="width: 60px"></span> search
+        </a>
+        <a href="{% url "home1" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: green">
+          <span class="glyphicon glyphicon-search" style="width: 60px"></span> Result
+        </a>
+      </p>
+    </ul>
+  </div>
+</nav>
+</body>
+<div class="sidebar" >
+    <p style="float: left ;">
+        <a href="{% url "index" %}" class="btn btn-info btn-lg" style="margin:8px;">
+          <span class="glyphicon glyphicon-registration-mark" style="width: 40px"></span>Registration mark
+        </a>
+
+        <br>
+        <br>
+        <br>
+
+       <a href="{% url "AllDet" %}" class="btn btn-info btn-lg" style="margin:8px;">
+          <span class="glyphicon glyphicon-lock" style="width: 70px"></span> Student  login
+        </a>
+         <br>
+        <br>
+        <br>
+
+       <a href="{% url "Map" %}" class="btn btn-info btn-lg" style="margin:8px;">
+          <span class="glyphicon glyphicon-marker" style="width: 70px"></span><i class="fa fa-map-marker" style="font-size:20px;color:red"></i> Gogle Map
+        </a>
+
+
+    </p>
+    <p style="float: right ;">
+         <a href="{% url "Teacher" %}" class="btn btn-info btn-lg" style="margin:8px; background-color: #e60073">
+          <span class="glyphicon glyphicon-registration-mark" style="width: 60px"></span>Teacher Registr
+        </a>
+
+        <br>
+        <br>
+        <br>
+
+       <a href="{% url "TeaDet" %}" class="btn btn-info btn-lg" style="margin:8px;background-color: #e60073">
+          <span class="glyphicon glyphicon-lock" style="width: 75px"></span> Teacher   login
+        </a>
+
+        <br>
+        <br>
+        <br>
+
+       <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjDq_2GhevkAhVUkY8KHTQeCRoYABAAGgJzYg&ohost=www.google.com&cid=CAESEeD2XUcDnClgFZ6CNVoBwQlt&sig=AOD64_13xILXn6pCvQOvDzwYrRhyeP1fRg&q=&ved=2ahUKEwiH8PWGhevkAhU38nMBHQZlCiYQ0Qx6BAgPEAE&adurl=" class="btn btn-info btn-lg" style="margin:8px;background-color: #e60073">
+          <span class="glyphicon glyphicon-bus" style="width: 90px"></span><i class="fa fa-bus" style="font-size:28px;color:red;"></i> RedBus
+        </a>
+
+    </p>
+
+
+<table border="1" align="center">
+    <tr><td>
+<iframe align="center" width="600" height="600" src="https://www.youtube.com/embed/TckGcxwknYU" frameborder="0" allow="accelerometer; version=3&autoplay=1; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </td></tr>
+</table>
+
+</div>
+</html>
+</fieldset>
