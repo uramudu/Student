@@ -1,3 +1,185 @@
 from django.db import models
+class Student(models.Model):
+    idno=models.IntegerField(primary_key=True)
+    name=models.CharField(max_length=30)
+    surname=models.CharField(max_length=30)
+    father=models.CharField(max_length=30)
+    mother=models.CharField(max_length=30)
+    date=models.CharField(max_length=30)
+    gen=models.CharField(max_length=30)
+    phone=models.CharField(max_length=30)
+    username=models.CharField(max_length=30)
+    password=models.CharField(max_length=30)
+    section=models.CharField(max_length=30)
+    image = models.FileField(upload_to='profile_pics/',blank=True)
+class Chart(models.Model):
+    num=models.CharField(max_length=30)
+    quection=models.CharField(max_length=1000)
+class Teacher(models.Model):
+    name = models.CharField(max_length=30)
+    date = models.CharField(max_length=30)
+    gen = models.CharField(max_length=30)
+    phone = models.CharField(max_length=30)
+    sub=models.CharField(max_length=30)
+    username = models.CharField(max_length=30)
+    password = models.CharField(max_length=30)
+class Chart1(models.Model):
+    num=models.CharField(max_length=30)
+    Answer=models.CharField(max_length=1000)
+class Std(models.Model):
+    num=models.IntegerField(primary_key=True)
+    Answer=models.CharField(max_length=30)
+class Exam2(models.Model):
+    idno=models.IntegerField(primary_key=True)
+    que1=models.CharField(max_length=1800)
+    ans1 = models.CharField(max_length=180)
+    ans2 = models.CharField(max_length=180)
+    ans3 = models.CharField(max_length=180)
+    ans4 = models.CharField(max_length=180)
 
-# Create your models here.
+    que2=models.CharField(max_length=1800)
+    ans5 = models.CharField(max_length=180)
+    ans6 = models.CharField(max_length=180)
+    ans7 = models.CharField(max_length=180)
+    ans8 = models.CharField(max_length=180)
+
+    que3=models.CharField(max_length=1800)
+    ans9 = models.CharField(max_length=180)
+    ans10 = models.CharField(max_length=180)
+    ans11 = models.CharField(max_length=180)
+    ans12 = models.CharField(max_length=180)
+
+    que4=models.CharField(max_length=1800)
+    ans13 = models.CharField(max_length=180)
+    ans14 = models.CharField(max_length=180)
+    ans15 = models.CharField(max_length=180)
+    ans16 = models.CharField(max_length=180)
+
+    que5=models.CharField(max_length=1800)
+    ans17 = models.CharField(max_length=180)
+    ans18 = models.CharField(max_length=180)
+    ans19 = models.CharField(max_length=180)
+    ans20 = models.CharField(max_length=180)
+
+    que6=models.CharField(max_length=1800)
+    ans21 = models.CharField(max_length=180)
+    ans22 = models.CharField(max_length=180)
+    ans23 = models.CharField(max_length=180)
+    ans24 = models.CharField(max_length=180)
+
+    que7=models.CharField(max_length=1800)
+    ans25 = models.CharField(max_length=180)
+    ans26 = models.CharField(max_length=180)
+    ans27 = models.CharField(max_length=180)
+    ans28 = models.CharField(max_length=180)
+
+    que8=models.CharField(max_length=1800)
+    ans29 = models.CharField(max_length=180)
+    ans30 = models.CharField(max_length=180)
+    ans31 = models.CharField(max_length=180)
+    ans32 = models.CharField(max_length=180)
+
+    que9=models.CharField(max_length=1800)
+    ans33 = models.CharField(max_length=180)
+    ans34 = models.CharField(max_length=180)
+    ans35 = models.CharField(max_length=180)
+    ans36 = models.CharField(max_length=180)
+
+    que10=models.CharField(max_length=1800)
+    ans37 = models.CharField(max_length=180)
+    ans38 = models.CharField(max_length=180)
+    ans39 = models.CharField(max_length=180)
+    ans40 = models.CharField(max_length=180)
+class Exam3(models.Model):
+    idno=models.IntegerField(primary_key=True)
+    que1=models.CharField(max_length=30)
+    que2=models.CharField(max_length=30)
+    que3=models.CharField(max_length=30)
+    que4=models.CharField(max_length=30)
+    que5=models.CharField(max_length=30)
+    que6=models.CharField(max_length=30)
+    que7=models.CharField(max_length=30)
+    que8=models.CharField(max_length=30)
+    que9=models.CharField(max_length=30)
+    que10=models.CharField(max_length=30)
+class Answer(models.Model):
+    answer1=models.CharField(max_length=30)
+    answer2=models.CharField(max_length=30)
+    answer3=models.CharField(max_length=30)
+    answer4=models.CharField(max_length=30)
+    answer5=models.CharField(max_length=30)
+    answer6=models.CharField(max_length=30)
+    answer7=models.CharField(max_length=30)
+    answer8=models.CharField(max_length=30)
+    answer9=models.CharField(max_length=30)
+    answer10=models.CharField(max_length=30)
+class Std1(models.Model):
+    idno = models.IntegerField(primary_key=True)
+    Answer = models.CharField(max_length=30)
+    que1 = models.CharField(max_length=1800)
+    ans1 = models.CharField(max_length=180)
+    ans2 = models.CharField(max_length=180)
+    ans3 = models.CharField(max_length=180)
+    ans4 = models.CharField(max_length=180)
+
+    que2 = models.CharField(max_length=1800)
+    ans5 = models.CharField(max_length=180)
+    ans6 = models.CharField(max_length=180)
+    ans7 = models.CharField(max_length=180)
+    ans8 = models.CharField(max_length=180)
+
+    que3 = models.CharField(max_length=1800)
+    ans9 = models.CharField(max_length=180)
+    ans10 = models.CharField(max_length=180)
+    ans11 = models.CharField(max_length=180)
+    ans12 = models.CharField(max_length=180)
+
+    que4 = models.CharField(max_length=1800)
+    ans13 = models.CharField(max_length=180)
+    ans14 = models.CharField(max_length=180)
+    ans15 = models.CharField(max_length=180)
+    ans16 = models.CharField(max_length=180)
+
+    que5 = models.CharField(max_length=1800)
+    ans17 = models.CharField(max_length=180)
+    ans18 = models.CharField(max_length=180)
+    ans19 = models.CharField(max_length=180)
+    ans20 = models.CharField(max_length=180)
+
+    que6 = models.CharField(max_length=1800)
+    ans21 = models.CharField(max_length=180)
+    ans22 = models.CharField(max_length=180)
+    ans23 = models.CharField(max_length=180)
+    ans24 = models.CharField(max_length=180)
+
+    que7 = models.CharField(max_length=1800)
+    ans25 = models.CharField(max_length=180)
+    ans26 = models.CharField(max_length=180)
+    ans27 = models.CharField(max_length=180)
+    ans28 = models.CharField(max_length=180)
+
+    que8 = models.CharField(max_length=1800)
+    ans29 = models.CharField(max_length=180)
+    ans30 = models.CharField(max_length=180)
+    ans31 = models.CharField(max_length=180)
+    ans32 = models.CharField(max_length=180)
+
+    que9 = models.CharField(max_length=1800)
+    ans33 = models.CharField(max_length=180)
+    ans34 = models.CharField(max_length=180)
+    ans35 = models.CharField(max_length=180)
+    ans36 = models.CharField(max_length=180)
+
+    que10 = models.CharField(max_length=1800)
+    ans37 = models.CharField(max_length=180)
+    ans38 = models.CharField(max_length=180)
+    ans39 = models.CharField(max_length=180)
+    ans40 = models.CharField(max_length=180)
+
+
+
+
+
+
+
+
